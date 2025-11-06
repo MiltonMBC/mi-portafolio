@@ -1,0 +1,604 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icons from '../components/Icons.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const techStack = [
+  { name: "HTML", color: "#EF652A", category: "Frontend" },
+  { name: "CSS", color: "#30A9DC", category: "Frontend" },
+  { name: "JavaScript", color: "#F0DB4F", category: "Language" },
+  { name: "TypeScript", color: "#3178C6", category: "Language" },
+  { name: "Tailwind", color: "#17BAB8", category: "CSS Framework" },
+  { name: "React", color: "#00D8FF", category: "Frontend" },
+  { name: "Redux", color: "#764ABC", category: "State Management" },
+  { name: "Next.js", color: "#FAFAFA", category: "Framework" },
+  { name: "Astro", color: "#FAFAFA", category: "Framework" },
+  { name: "Node.js", color: "#539E43", category: "Runtime" },
+  { name: "Express", color: "#FAFAFA", category: "Backend" },
+  { name: "GraphQL", color: "#F6009C", category: "API" },
+  { name: "Hono", color: "#FD5A11", category: "Backend" },
+  { name: "Shopify", color: "#51ed45", category: "E-commerce" },
+  { name: "Hydrogen", color: "#6864e8", category: "Framework" },
+  { name: "Deno", color: "#FAFAFA", category: "Runtime" },
+  { name: "Jasmine", color: "#8A4182", category: "Testing" },
+  { name: "Jest", color: "#99425B", category: "Testing" },
+  { name: "Testing Library", color: "#DC312F", category: "Testing" },
+  { name: "Git", color: "#DE4C36", category: "Version Control" },
+  { name: "Linux", color: "#DFAF22", category: "OS" },
+  { name: "VS Code", color: "#3DA9F2", category: "Editor" },
+  { name: "Figma", color: "#A95FFF", category: "Design" }
+];
+const projects = [
+  {
+    title: "CertivipSpa",
+    description: "Sitio web informativo desarrollado para Certivip SPA, enfocado en presentar los servicios de la empresa y ofrecer soporte al usuario. Incluye secciones de términos y condiciones, políticas de privacidad y un formulario de contacto, además de una opción para desactivar cuentas de manera segura. Diseñado con una interfaz moderna, clara y completamente adaptable a dispositivos móviles.",
+    type: "Aplicación Web",
+    typeColor: "#FAA628",
+    link: "https://certivip.com/",
+    status: "Publicado"
+  },
+  {
+    title: "CertivipSpa", 
+    description: "Aplicación móvil desarrollada en Flutter para la gestión de vehículos y usuarios. Incluye registro de datos, seguimiento de ubicación, notificaciones automáticas y sincronización segura con servicios en la nube. Diseñada con una interfaz moderna, rápida y adaptable para Android e iOS.",
+    type: "Aplicación Móvil",
+    typeColor: "#cb3837",
+    link: "https://certivip.com/",
+    status: "Desarrollo"
+  },
+  {
+    title: "Machine Leerning",
+    description: "Proyecto de inteligencia artificial enfocado en la generación de arte mediante Redes Generativas Antagónicas (GANs). Desarrollado con Python, TensorFlow, Keras y Streamlit, permite crear retratos artísticos ajustando el número de imágenes y visualizar los resultados en tiempo real.",
+    type: "Aplicación Web",
+    typeColor: "#FD5A11",
+    link: "https://machine-knw8fn36vr5uhpksbjfq5g.streamlit.app/",
+    status: "Publicado"
+  },
+  {
+    title: "Espacio Arterapia",
+    description: "Aplicación web generativa impulsada por IA que convierte imágenes a código usando visión artificial avanzada. Ofrece un modelo de suscripción freemium con 8 créditos gratuitos al mes. Construida con integración ChatGPT usando la API de OpenAI.",
+    type: "Aplicación Web",
+    typeColor: "#10a37f",
+    link: "https://espacioarterapia.com/intranet.com/",
+    status: "Publicado"
+  }
+];
+
+const experienceTasks = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i"
+];
+---
+
+<Layout title="Milton Belén - Portafolio">
+  <div class="min-h-screen text-white">
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 header__nav">
+      <nav class="container py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            {/* ===========================================<div class="logo-icon animate-glow"></div>==========================================*/}
+            <h2 class="text-xl font-bold">
+              <a href="#inicio" class="nav-link">Inicio</a>
+            </h2>
+          </div>
+          <ul class="hidden-mobile flex items-center gap-8">
+            <li><a href="#sobremi" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
+            <li><ThemeToggle /></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+{/* ===========================================0===========================================*/}
+{/* ====================================entrada1===========================================*/}
+      <section id="inicio" class="min-h-screen flex items-center justify-center px-6 hero-gradient relative overflow-hidden py-32">
+        <div class="absolute bg-noise" style="top: 0; left: 0; right: 0; bottom: 0; opacity: 0.5;"></div>
+        <div class="container-sm text-center animate-fade-in-up relative z-10">
+          <h1 class="font-heading text-6xl mb-6 leading-tight animate-float">
+            Milton Moises <br />Belén Cayo
+          </h1>
+          <h2 class="text-2xl mb-8 font-medium text-light">
+            Ingeniero <span class="text-gradient font-bold"> Informático</span>
+          </h2>
+          <p class="text-lg leading-relaxed text-muted max-w-xl mx-auto">
+            Siempre aprendiendo sobre nuevas
+            <span class="text-accent font-semibold"> herramientas</span> y
+            <span class="text-accent font-semibold"> tecnologías</span> para utilizar.
+          </p>
+          <div class="decorative-circle decorative-circle-1"></div>
+          <div class="decorative-circle decorative-circle-2"></div>
+        </div>
+      </section>
+
+{/* ===========================================0===========================================*/}
+{/* ====================================entrada 2===========================================*/}
+    <section id="sobremi" class="py-20 px-6 section-gradient">
+        <div class="container-sm">
+          <div class="flex flex-col gap-12 items-start">
+            <div class="w-full">
+              <h2 class="text-3xl font-bold mb-8 text-gradient">Sobre Mí</h2>
+              <ul class="flex gap-6 mb-8">
+                <li>
+                  <a href="https://www.linkedin.com/in/milton-belen" target="_blank" rel="noopener noreferrer" class="social-link text-white">
+                    <Icons name="linkedin" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/MiltonMBC" target="_blank" rel="noopener noreferrer" class="social-link text-white">
+                    <Icons name="github" />
+                  </a>
+                </li>
+              </ul>
+              <div class="flex flex-col gap-4">
+                <p class="text-lg leading-relaxed text-light">
+                  ¡Hola!👋 Soy Milton Belén, <span class="font-bold text-accent"> Ingeniero en Informática</span> y <span class="font-bold text-accent"> Desarrollador full-stack</span>{" "}
+                  con <span class="font-bold text-accent">+1 años</span> de experiencia construyendo aplicaciones tanto web como aplicaciones mobiles para el usuario. A lo largo de mi trayectoria, he <span class="font-bold text-white">trabajado</span>{" "}
+                  con mis compañeros en sus tareas en diversas áreas como backend, front y gestión de bases de datos, <span class="font-bold text-white">aprendiendo</span> mucho de ellos.
+                </p>
+                <p class="text-lg leading-relaxed text-light">
+                  <span class="font-bold text-white">Exploro constantemente</span> nuevas tecnologías y recursos para
+                  construir <span class="text-accent font-semibold">aplicaciones fluidas y escalables</span> que realmente
+                  marquen la diferencia.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-3 gap-6 stats-card">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-accent">+1</div>
+                  <div class="text-sm text-muted">Años de Experiencia</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-accent">15+</div>
+                  <div class="text-sm text-muted">Tecnologías</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-accent">4</div>
+                  <div class="text-sm text-muted">Proyectos Principales</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+{/* ===========================================0===========================================*/}
+{/* ====================================experiencia===========================================*/}
+<section id="experiencia" class="py-20 px-6 bg-noise">
+  <div class="container-sm">
+    <div class="flex flex-col justify-between items-start mb-12">
+      <h2 class="text-3xl font-bold mb-4 text-gradient">Experiencia</h2>
+      <div class="status-badge text-accent font-medium text-lg">
+        🚀 Abierto a trabajar
+      </div>
+    </div>
+
+    <!-- Certivip -->
+    <article class="timeline-border mb-6">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="flex flex-col gap-4 mb-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl font-bold text-white">Certivip</h3>
+            <p class="text-lg font-medium text-accent">Práctica Profesional</p>
+            <span class="status-badge text-sm inline-block w-fit">Práctica Profesional</span>
+          </div>
+        </div>
+        <p class="flex items-center mb-2 text-muted">
+          <Icons name="clock" size="16" />
+          <span class="ml-2">Abril 2025 - Agosto 2025</span>
+        </p>
+        <p class="text-light">Ecosistema digital desarrollado con Flutter y tecnologías web. La app permite gestionar usuarios y vehículos con sincronización segura y notificaciones automáticas, mientras que el sitio web ofrece información corporativa, contacto y gestión de cuentas, todo con un diseño moderno y responsivo.</p>
+      </div>
+    </article>
+
+    <!-- Portafolio -->
+    <article class="timeline-border mb-6">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="flex flex-col gap-4 mb-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl font-bold text-white">Portafolio Personal</h3>
+            <p class="text-lg font-medium text-accent">Diseño y desarrollo Web</p>
+            <span class="status-badge text-sm inline-block w-fit">Proyecto personal</span>
+          </div>
+        </div>
+        <p class="flex items-center mb-2 text-muted">
+          <Icons name="clock" size="16" />
+          <span class="ml-2">Febrero 2025 - Marzo 2025</span>
+        </p>
+        <p class="text-light">Desarrollo de este portafolio personal utilizando Astro, mostrando proyectos, habilidades y experiencias de forma dinámica.</p>
+      </div>
+    </article>
+
+    <!-- Proyecto Universitario -->
+    <article class="timeline-border mb-6">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="flex flex-col gap-4 mb-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl font-bold text-white">Proyecto Universitario</h3>
+            <p class="text-lg font-medium text-accent">Generador de imágenes con Machine Learning</p>
+            <span class="status-badge text-sm inline-block w-fit">Proyecto académico</span>
+          </div>
+        </div>
+        <p class="flex items-center mb-2 text-muted">
+          <Icons name="clock" size="16" />
+          <span class="ml-2">Inicio Noviembre 2024 - Fin Noviembre 2024</span>
+        </p>
+        <p class="text-light">Se implementó una red generativa adversaria (GAN) capaz de generar imágenes a partir de entrenamiento personalizado con datos.</p>
+      </div>
+    </article>
+
+    <!-- Arterapia -->
+    <article class="timeline-border mb-6">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="flex flex-col gap-4 mb-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl font-bold text-white">Arterapia</h3>
+            <p class="text-lg font-medium text-accent">Desarrollador Full Stack</p>
+            <span class="status-badge text-sm inline-block w-fit">Empresa asignada por INACAP</span>
+          </div>
+        </div>
+        <p class="flex items-center mb-2 text-muted">
+          <Icons name="clock" size="16" />
+          <span class="ml-2">Marzo 2024 - Diciembre 2024</span>
+        </p>
+        <p class="text-light">Se creó una intranet con sistema de login y un panel para la gestión de recursos humanos. Permitía administrar trabajadores, visualizar información y subir documentos personales.</p>
+      </div>
+    </article>
+
+    <!-- Minincap -->
+    <article class="timeline-border mb-6">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="flex flex-col gap-4 mb-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl font-bold text-white">Minincap</h3>
+            <p class="text-lg font-medium text-accent">Desarrollador Full Stack</p>
+            <span class="status-badge text-sm inline-block w-fit">Empresa asignada por INACAP</span>
+          </div>
+        </div>
+        <p class="flex items-center mb-2 text-muted">
+          <Icons name="clock" size="16" />
+          <span class="ml-2">Agosto 2023 - Diciembre 2023</span>
+        </p>
+        <p class="text-light">Se desarrolló una página web para la empresa Minincap, integrando información institucional, redes sociales actualizadas y un apartado para publicar noticias relevantes de la empresa.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+
+{/* ===========================================0===========================================*/}
+{/* ====================================proyectos===========================================*/}
+      <section id="proyectos" class="py-20 px-6 section-gradient">
+        <div class="container-lg">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-gradient">Proyectos Destacados</h2>
+            <p class="text-muted" style="max-width: 32rem; margin: 0 auto;">
+              Una colección de proyectos que muestran mis habilidades en el desarrollo web moderno,
+              desde aplicaciones full-stack hasta contribuciones de código abierto.
+            </p>
+          </div>
+
+          <div class="grid grid-md-2 gap-8">
+            {projects.map((project) => (
+              <article class="project-card">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <div class="h-full flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                      <h3 class="text-2xl font-bold text-white">
+                        {project.title}
+                      </h3>
+                      <div class="animate-float">
+                        <Icons name="external-link" size="20" />
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <span 
+                        class="project-badge"
+                        style={`background-color: ${project.typeColor}20; color: ${project.typeColor}; border: 1px solid ${project.typeColor}40`}
+                      >
+                        {project.type}
+                      </span>
+                      {project.status && (
+                        <span class="status-badge ml-2 text-sm">
+                          {project.status}
+                        </span>
+                      )}
+                    </div>
+
+                    <p class="leading-relaxed text-light flex-1">
+                      {project.description}
+                    </p>
+
+                    <div class="mt-6 flex items-center text-accent text-sm font-medium">
+                      <span class="nav-link">Ver Proyecto</span>
+                      <Icons name="arrow-right" size="16" />
+                    </div>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+{/* ===========================================0===========================================*/}
+{/* ====================================tecnologias===========================================*/}
+      <section id="tecnologias" class="py-20 px-6 bg-noise">
+        <div class="container-lg">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-gradient">Pila Tecnológica</h2>
+            <p class="text-muted" style="max-width: 32rem; margin: 0 auto;">
+              Herramientas y tecnologías que utilizo para dar vida a las ideas. Siempre aprendiendo y explorando nuevas.
+            </p>
+          </div>
+
+<div class="table_container">
+
+    <div class="category-group languages-frameworks">
+        <h2>Lenguajes y Frameworks</h2>
+        <div class="stack_grid">
+            <div class="stack-item html">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" alt="HTML logo"/>
+                <span class="label">HTML</span>
+                <span class="sub-label">Frontend</span>
+            </div>
+            <div class="stack-item css">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" alt="CSS logo"/>
+                <span class="label">CSS</span>
+                <span class="sub-label">Frontend</span>
+            </div>
+            <div class="stack-item js">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" alt="JavaScript logo"/>
+                <span class="label">JavaScript</span>
+                <span class="sub-label">Frontend</span>
+            </div>
+            <div class="stack-item react">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React logo"/>
+                <span class="label">React</span>
+                <span class="sub-label">Frontend</span>
+            </div>
+            <div class="stack-item bootstrap">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"alt="Bootstrap logo" />
+                <span class="label">Bootstrap</span>
+                <span class="sub-label">Frontend</span>
+            </div>
+            <div class="stack-item python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"alt="Python logo"/>
+                <span class="label">Python</span>
+                <span class="sub-label">Backend / ML</span>
+            </div>
+            <div class="stack-item php">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP logo"/>
+                <span class="label">PHP</span>
+                <span class="sub-label">Backend</span>
+            </div>
+            <div class="stack-item dart">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart logo"/>
+                <span class="label">Dart / Flutter</span>
+                <span class="sub-label">Frontend / Mobile</span>
+            </div>
+            <div class="stack-item r">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" alt="R logo"/>
+                <span class="label">R</span>
+                <span class="sub-label">Data Analysis</span>
+            </div>
+            <div class="stack-item django">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django logo"/>
+                <span class="label">Django</span>
+                <span class="sub-label">Backend</span>
+            </div>
+            <div class="stack-item astro">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" alt="Astro logo"/>
+                <span class="label">Astro</span>
+                <span class="sub-label">Frontend / Framework</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-group tools">
+        <h2>Herramientas</h2>
+        <div class="stack_grid">
+            <div class="stack-item sql">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL logo"/>
+                <span class="label">SQL</span>
+                <span class="sub-label">Database</span>
+            </div>
+            <div class="stack-item mysql">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MYSQL logo"/>
+                <span class="label">MySQL</span>
+                <span class="sub-label">Database</span>
+            </div>
+            <div class="stack-item aws-azure">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure logo"/>
+                <span class="label">Azure</span>
+                <span class="sub-label">Cloud</span>
+            </div>
+            <div class="stack-item aws-azure">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS logo"/>
+                <span class="label">AWS</span>
+                <span class="sub-label">Cloud</span>
+            </div>
+            <div class="stack-item git-github">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg" alt="Git logo"/>
+                <span class="label">Git</span>
+                <span class="sub-label">VCS</span>
+            </div>
+            <div class="stack-item git-github">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Git logo"/>
+                <span class="label">GitHub</span>
+                <span class="sub-label">VCS</span>
+            </div>
+            <div class="stack-item ms-project">
+                <img src="/src/img/project.png" alt="MS Project logo"/>
+                <span class="label">Microsoft Project</span>
+                <span class="sub-label">Tools</span>
+            </div>
+            <div class="stack-item powerbi">
+                <img src="/src/img/powerbi.png" alt="Power BI logo"/>
+                <span class="label">Power BI</span>
+                <span class="sub-label">Tools</span>
+            </div>
+            <div class="stack-item ms-office">
+                <img src="/src/img/office.png" alt="Microsoft Office logo"/>
+                <span class="label">Microsoft Office</span>
+                <span class="sub-label">Tools</span>
+            </div>
+            <div class="stack-item windows">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="Windows logo"/>
+                <span class="label">Windows</span>
+                <span class="sub-label">OS</span>
+            </div>
+            <div class="stack-item windows-linux">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+                <span class="label">Linux</span>
+                <span class="sub-label">OS</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<style>
+
+    .table_container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto;
+        display: grid;
+        gap: 20px;
+    }
+
+    .category-group {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-group h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #f7df1e;
+    }
+
+    .stack_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    .stack-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stack-item:hover {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .stack-item img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+
+    .stack-item .label {
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .stack-item .sub-label {
+        font-size: 0.8rem;
+        color: #bbb;
+    }
+
+    /* Colores de fondo por categoría (similares a la imagen original) */
+    .languages-frameworks .stack-item { 
+        background-color: rgba(48, 105, 152, 0.1);
+        border: 1px solid rgba(48, 105, 152, 0.3);
+    }
+    .tools .stack-item { 
+        background-color: rgba(255, 109, 0, 0.1);
+        border: 1px solid rgba(255, 109, 0, 0.3);
+    }
+
+    /* Colores de texto para los nombres de las tecnologías (similares a la imagen) */
+    .html .label { color: #EF652A; }
+    .css .label { color: #264de4; }
+    .js .label { color: #f7df1e; }
+    .react .label { color: #61dafb; }
+    .bootstrap .label { color: #7952b3; }
+    .python .label { color: #306998; }
+    .php .label { color: #8892be; }
+    .dart .label { color: #0175C2; }
+    .r .label { color: #276DC3; }
+    .django .label { color: #092E20; }
+    .sql .label { color: #0072C6; }
+    .mysql .label { color: #4479A1; }
+    .aws-azure .label { color: #0078D4; }
+    .git-github .label { color: #F05030; }
+    .ms-project .label { color: #FF6D00; }
+    .powerbi .label { color: #F2C811; }
+    .ms-office .label { color: #0078D4; }
+    .windows-linux .label { color: #0078D4; }
+    .astro .label { color: #FF6D00; }
+</style>
+
+
+
+</div>
+
+
+
+        </div>
+      </section>
+
+      
+    </main>
+
+    <footer class="py-12 px-6 footer-gradient">
+      <div class="container-sm">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold mb-2 text-gradient">Conectemos</h3>
+          <p class="text-muted">Siempre abierto a discutir nuevas oportunidades y colaboraciones</p>
+        </div>
+        <ul class="flex justify-center gap-6">
+          <li>
+            <a href="https://www.linkedin.com/in/milton-belen" target="_blank" rel="noopener noreferrer" class="social-link text-muted">
+              <Icons name="linkedin" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/MiltonMBC" target="_blank" rel="noopener noreferrer" class="social-link text-muted">
+              <Icons name="github" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</Layout>
